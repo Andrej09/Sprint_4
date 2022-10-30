@@ -14,6 +14,8 @@ public class WhomScooter {
         this.driver = driver;
     }
 
+    private final String url = "https://qa-scooter.praktikum-services.ru/";
+
     //Поле Имя
     public final By fieldName = By.xpath(".//input[@placeholder='* Имя']");
 
@@ -32,6 +34,11 @@ public class WhomScooter {
     //Кнопка Далее
     public final By nextButton = By.xpath(".//div[@class='Order_NextButton__1_rCA']/button[text()='Далее']");
 
+    //Переход на страницу сайта
+    public WhomScooter open(){
+        driver.get(url);
+        return this;
+    }
 
     //Нажатие кнопок Заказать
     public WhomScooter clickButtonOrder(By name){

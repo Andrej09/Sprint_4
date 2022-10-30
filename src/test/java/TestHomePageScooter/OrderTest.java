@@ -61,11 +61,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
         }
 
         @Test
-        public void АillingFieldMaking() {
+        public void fillingFieldMaking() {
 
-            driver.get("https://qa-scooter.praktikum-services.ru/");
+
             WhomScooter whomScooter = new WhomScooter(driver);
-            whomScooter.clickButtonOrder(buttonOrder)
+            whomScooter
+                       .open()
+                       .clickButtonOrder(buttonOrder)
                        .completionFieldName(name)
                        .completionFieldSurname(surname)
                        .completionFieldAddress(address)
